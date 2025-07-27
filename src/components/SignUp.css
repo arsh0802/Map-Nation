@@ -1,0 +1,180 @@
+/* General Signup Page Styling */
+.signup-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('bg ka bhi bg.jpg'); /* Your background image here */
+    padding: 5px;
+}
+
+.signup-container {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    max-width: 1200px; /* Set maximum width */
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 30px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Signup Image Styling */
+.signup-image {
+    flex: 1;
+    background-image: url('background 3.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.welcome-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.932), rgba(82, 79, 79, 0.996), rgba(194, 160, 9, 0.793));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.36);
+    z-index: 1;
+}
+
+/* Signup Form Styling */
+.signup-form {
+    flex: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.932), rgba(139, 133, 133, 0.8), rgba(194, 160, 9, 0.7));
+    height: 100%; /* Ensure it takes full height */
+}
+
+.signup-form h2 {
+    color: #1f002c;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    flex: 1;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: black;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.153);
+    color: black;
+    font-size: 14px;
+}
+
+.signup-form button {
+    background-color: rgba(0, 0, 0, 0.255);
+    color: #0f0f0f;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    align-self: center;
+}
+
+.login-link {
+    text-align: center;
+    color: black;
+}
+
+.login-link a {
+    color: #542c4e;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive styling */
+
+/* For screens below 1024px */
+@media (max-width: 1024px) {
+    .signup-container {
+        flex-direction: column; /* Stack vertically on smaller screens */
+    }
+
+    .signup-image {
+        height: 200px; /* Set a fixed height */
+    }
+
+    .welcome-message {
+        font-size: 40px;
+        display: none; /* Hide the welcome message */
+    }
+}
+
+/* For screens below 768px */
+@media (max-width: 768px) {
+    .signup-form h2 {
+        font-size: 32px;
+    }
+
+    .form-row {
+        flex-direction: column; /* Stack form fields vertically */
+        gap: 10px;
+    }
+
+    .welcome-message {
+        font-size: 30px;
+    }
+}
+
+/* For very small mobile screens (less than 480px) */
+@media (max-width: 480px) {
+    .signup-form {
+        padding: 20px;
+    }
+
+    .form-group input {
+        padding: 8px;
+    }
+
+    .signup-form h2,
+    .welcome-message {
+        font-size: 24px;
+    }
+}
+
+/* Hide the welcome message on smaller screens */
+@media (max-width: 1024px) {
+    .welcome-message {
+        display: none; /* Hide the welcome message */
+    }
+}

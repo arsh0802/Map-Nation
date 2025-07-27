@@ -1,0 +1,293 @@
+/* Full page container */
+
+.page-container {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Content container */
+.content-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border-radius: 20px;
+  width: 65%;
+  max-width: 1200px;
+  margin-left: 18%;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, rgb(255, 255, 255), rgba(247, 233, 194, 0.8), rgba(243, 210, 65, 0.904));
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  margin-bottom: 40px;
+  animation: slideIn 1s ease-out;
+}
+
+/* Profile picture section */
+.section {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  animation: slideInProfile 1s ease-out 1s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+/* Profile picture styling */
+.profile-picture {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-picture img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.button {
+  padding: 10px 20px;
+  border: none;
+  background-color: rgba(127, 255, 212, 0.9);
+  color: black;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Account details section */
+.account-details {
+  margin-left: 20px;
+  text-align: center;
+  flex: 2;
+}
+
+.form-group {
+  margin: 20px;
+  color: black;
+  /* Spacing between form elements */
+}
+
+input {
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-top: 10px;
+  background: linear-gradient(135deg, rgb(255, 255, 255), rgba(184, 184, 184, 0.8), rgba(102, 101, 100, 0.904));
+  box-sizing: border-box;
+  font-size: 0.9rem;
+  opacity: 0;
+  /* Start invisible */
+  animation: fadeInInput 0.5s ease-out forwards;
+}
+
+/* Save button */
+.save-button {
+  padding: 10px 20px;
+  border: none;
+  background-color: rgba(127, 255, 212, 0.9);
+  color: black;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-left: 20px;
+  width: 98%;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  animation: fadeInInput 0.5s ease-out forwards;
+  animation-delay: 3.8s;
+}
+
+.save-button:hover {
+  background-color: rgba(2, 189, 133, 0.966);
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgb(13, 54, 45);
+}
+
+/* Animations */
+@keyframes slideIn {
+  from {
+    transform: translate(-100%, -100%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInProfile {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInInput {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Staggered animation for input fields */
+.form-group:nth-child(1) input {
+  animation-delay: 2s;
+}
+
+.form-group:nth-child(2) input {
+  animation-delay: 2.2s;
+}
+
+.form-group:nth-child(3) input {
+  animation-delay: 2.4s;
+}
+
+.form-group:nth-child(4) input {
+  animation-delay: 2.6s;
+}
+
+.form-group:nth-child(5) input {
+  animation-delay: 2.8s;
+}
+
+.form-group:nth-child(6) input {
+  animation-delay: 3s;
+}
+
+.form-group:nth-child(7) input {
+  animation-delay: 3.2s;
+}
+
+.form-group:nth-child(8) input {
+  animation-delay: 3.4s;
+}
+
+.form-group:nth-child(9) input {
+  animation-delay: 3.6s;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1200px) {
+  .content-container {
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .content-container {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .section {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .account-details {
+    margin-left: 0;
+    width: 90%;
+  }
+
+  .form-group {
+    margin: 10px;
+  }
+
+  .save-button {
+    width: 100%;
+    margin: 0;
+  }
+}
+/* Responsive Styles */
+@media screen and (max-width: 1200px) {
+  .content-container {
+    width: 85%;
+    padding: 15px;
+  }
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 900px) {
+  .content-container {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .section {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .account-details {
+    margin-left: 0;
+    width: 90%;
+    height: 300px; /* Fixed height for scrolling effect */
+    padding-right: 10px; /* Padding for better scroll experience */
+  }
+
+  .form-group {
+    margin: 10px; 
+  }
+
+  .save-button {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .profile-picture img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .button {
+    padding: 8px 16px;
+  }
+
+  input {
+    font-size: 0.8rem;
+    padding: 8px;
+  }
+
+  .save-button {
+    font-size: 0.8rem;
+    padding: 8px;
+  }
+
+  /* Add overflow for content scrolling */
+  .account-details {
+    height: 250px; /* Smaller fixed height for mobile */
+  }
+}

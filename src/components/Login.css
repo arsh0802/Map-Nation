@@ -1,0 +1,117 @@
+
+.login-page {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-image: url('bg ka bhi bg.jpg'); /* Your background image here */
+  background-size: cover; /* Ensures the image covers the full page */
+  background-position: center; /* Centers the background */
+  background-repeat: no-repeat; /* Prevents repeating */
+  overflow: hidden; /* No extra scroll or white space */
+}
+
+.login-container {
+  display: flex;
+  width: 60%;
+  height: 70%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.932), rgba(139, 133, 133, 0.8), rgba(194, 160, 9, 0.7));
+  border-radius: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.login-form {
+  width: 50%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.932), rgba(182, 174, 174, 0.885), rgba(207, 175, 31, 0.852));
+}
+
+.login-image {
+  width: 50%;
+  height: 100%;
+  background-image: url('background 3.jpg'); /* Your image here */
+  background-size: cover;
+  background-position: center;
+  position: relative; /* So the welcome message stays within */
+}
+
+.logIn {
+  color: #1f002c;
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.form-group label {
+  font-size: 22px;
+  color: black;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  margin-top: 1%;
+  background-color: rgba(0, 0, 0, 0.153);
+}
+
+button {
+  background-color: rgba(0, 0, 0, 0.255);
+  color: #0f0f0f;
+  padding: 15px 25px;
+  font-size: 18px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.register-link {
+  text-align: center;
+  color: black;
+}
+
+.register-link a {
+  color: #542c4e;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+.welcome-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 48px;
+  color: transparent;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.74), rgba(82, 79, 79, 0.927), rgba(194, 160, 9, 0.7));
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.385);
+}
+
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+  }
+
+  .login-image {
+    width: 100%;
+    height: 250px;
+  }
+
+  .login-form {
+    width: 100%;
+  }
+}

@@ -1,0 +1,185 @@
+.landing-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(90deg, #1b1b1b 0%, #e0bb00 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  top: -100px; /* Start off-screen */
+  z-index: 10;
+  font-size: 25px;
+  animation: slideDownNavbar 0.7s ease-out forwards; /* Navbar animation */
+}
+
+@keyframes slideDownNavbar {
+  0% {
+    top: -100px;
+    opacity: 0;
+  }
+  100% {
+    top: 20px;
+    opacity: 1;
+  }
+}
+
+.logo-image {
+  width: 70px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.login-btn, .signup-btn {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  z-index: 15;
+}
+
+.threeDView {
+  position: absolute;
+  top: 0;
+  right: 0; /* Ensure it stays on the right side */
+  width: 50%; /* Adjust the width so that it stays on the right half */
+  height: 100vh;
+  z-index: 1;
+  overflow: hidden;
+  opacity: 0; /* Initially hidden */
+  animation: slideIn3D 0.7s ease-out 1.4s forwards; /* 1.4s delay before the animation starts */
+}
+
+@keyframes slideIn3D {
+  0% {
+    right: -100%;
+    opacity: 0; /* Hidden initially */
+  }
+  100% {
+    right: 0;
+    opacity: 1; /* Become visible after the animation */
+  }
+}
+
+
+.login-btn:hover, .signup-btn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 0 60px;
+}
+
+.left-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 50%;
+  z-index: 10;
+}
+
+.main-title {
+  font-size: 100px;
+  font-weight: 600;
+  margin-left: 145px;
+  line-height: 0.9;
+  opacity: 0; /* Start hidden */
+  animation: slideInTitle 0.7s ease-out 0.7s forwards; /* Title animation */
+}
+
+@keyframes slideInTitle {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.subtitle {
+  font-size: 20px;
+  margin-top: 20px;
+  max-width: 500px;
+  margin-left: 145px;
+  opacity: 0; /* Start hidden */
+  animation: slideInSubtitle 0.7s ease-out 1s forwards; /* Subtitle animation */
+}
+
+@keyframes slideInSubtitle {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.right-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .main-title {
+    font-size: 60px;
+  }
+  
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .navbar {
+    padding: 10px 20px;
+  }
+
+  .main-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .left-content {
+    max-width: 90%;
+  }
+
+  .right-content {
+    margin-top: 20px;
+  }
+}

@@ -1,0 +1,110 @@
+/* Sidebar Content */
+.sidebar-content {
+    top: 0;
+    position: fixed;
+    left: 30px;
+    height: 100%;
+    width: 70px;  /* Shrink the sidebar width initially */
+    background: none; /* Keep background transparent */
+    z-index: 1000;
+    color: white;
+    transition: width 0.3s ease;  /* Smooth width change on hover */
+}
+
+/* Ensure mobile view toggle works */
+.sidebar-content.hidden {
+    display: none;
+}
+
+/* Sidebar expand on hover */
+.sidebar-content .sidebar-list-container:hover {
+    width: 220px;  /* Expand width on hover */
+}
+
+/* Sidebar List Container */
+.sidebar-list-container {
+    width: 70px; /* Fixed width initially for the list container */
+    transition: width 0.3s ease; /* Smooth expand on hover */
+}
+
+/* Sidebar List */
+.sidebar-list {
+    padding: 20px;
+    list-style: none;
+    text-align: center;  /* Align icons centrally */
+}
+
+/* Sidebar List Items */
+.list-item {
+    margin: 20px 0px;
+    background-color: rgba(255, 255, 255, 0.808);  /* Semi-transparent button background initially */
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    color: white;  /* Keep text color white */
+    text-align: left;  /* Align text to the left */
+    overflow: hidden;  /* Hide overflowing text */
+    white-space: nowrap;  /* Prevent text wrapping */
+    padding-left: 10px;  /* Provide some padding to the icon */
+}
+
+/* Keep the background color solid white on hover */
+.list-item:hover {
+    background-color: white; /* Solid white background on hover */
+    transform: scale(1.05);  /* Slight scale effect on hover */
+}
+
+/* Ensure background remains white while hovering continuously */
+.sidebar-list-container:hover .list-item {
+    background-color: white;  /* Keep background solid white during hover */
+}
+
+/* Hide text initially */
+.list-item-text {
+    color: #000;  /* Text color black */
+    opacity: 0;  /* Hide text */
+    transition: opacity 0.3s ease;  /* Smooth show/hide transition */
+}
+
+/* Show text on hover of the list container or when item is active */
+.sidebar-list-container:hover .list-item-text,
+.sidebar-list-container.active .list-item-text {
+    opacity: 1;  /* Show text when the sidebar is hovered or active */
+}
+
+/* Mobile Menu Button Container */
+.mobile-menu-button-container {
+    position: fixed;
+    top: 5%;  /* Adjust as needed */
+    left: 5%;  /* Move the button further to the left */
+    z-index: 1100; /* Make sure it's above other content */
+    color: white;
+}
+
+/* Menu Button */
+.menu-button {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    padding: 8px;
+    color: white;
+}
+
+.menu-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Logo Container */
+.logo-container {
+    margin-top: 10px;
+    margin-left: 2.5vw;
+    padding: 20px 0;
+    width: 10vw; /* Width now depends on the viewport width */
+    max-width: 150px; /* Limit the maximum size */
+    
+}
+
+/* Logo Image */
+.logo-container img {
+    background-color: #000;
+    width: 100%; /* Maintain 100% width relative to the container */
+    height: auto; /* Maintain aspect ratio */
+}

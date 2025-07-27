@@ -1,0 +1,130 @@
+/* Ensure the html and body elements take the full screen with no overflow */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Prevent unwanted scrolling on the entire page */
+}
+
+/* Main container for the page with a full-screen background image */
+.whats-new-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  padding: 80px 20px 20px; /* Add top padding to avoid overlap */
+  box-sizing: border-box;
+  background: url('your-background-image.jpg') no-repeat center center fixed;
+  background-size: cover;
+  overflow-y: auto; /* Enable vertical scrolling for the content inside */
+}
+
+/* Individual announcement cards */
+.announcement-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.932), rgba(82, 79, 79, 0.8), rgba(194, 160, 9, 0.7));
+  padding: 15px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 600px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  opacity: 0;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 600px) {
+  .announcement-card {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .announcement-card h2 {
+    font-size: 18px;
+  }
+
+  .announcement-card p {
+    font-size: 14px;
+  }
+
+  .announcement-card .date {
+    font-size: 10px;
+  }
+
+  .announcement-card .icon {
+    font-size: 16px;
+  }
+}
+
+/* Alternating animations for announcement cards */
+.announcement-card:nth-child(1) {
+  animation: fadeInFromLeft 0.8s ease forwards;
+  animation-delay: 0.5s;
+}
+
+.announcement-card:nth-child(2) {
+  animation: fadeInFromRight 0.8s ease forwards;
+  animation-delay: 1.5s;
+}
+
+.announcement-card:nth-child(3) {
+  animation: fadeInFromLeft 0.8s ease forwards;
+  animation-delay: 2.5s;
+}
+
+/* Keyframes for fadeIn animations */
+@keyframes fadeInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Hover effect for cards */
+.announcement-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.announcement-card h2 {
+  font-size: 20px;
+  color: #ffffffaf;
+}
+
+.announcement-card p {
+  font-size: 16px;
+  color: #ffffffaf;
+}
+
+.announcement-card .date {
+  font-size: 12px;
+  color: #ffffffaf;
+}
+
+.announcement-card .icon {
+  font-size: 18px;
+  margin-left: 5px;
+}
