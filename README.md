@@ -28,6 +28,27 @@
 
 ---
 
+## Screenshots
+### Main
+![Main](https://github.com/user-attachments/assets/6f54518d-c2f2-4285-871f-30a72c926772)
+
+### Signup
+![Signup](https://github.com/user-attachments/assets/0a31fec5-f7f3-4c52-9a7f-cdd32de8787a)
+
+### Login
+![Login](https://github.com/user-attachments/assets/1ad42c7a-2958-46a9-9286-d117ac0c094d)
+
+### Dashboard
+![Dashboard](https://github.com/user-attachments/assets/cd137a61-ad0f-4978-9fbf-0021d375b3fe)
+
+### AI_Generator
+![AI_Generator](https://github.com/user-attachments/assets/d1833d55-0f9e-411f-bdb5-edd6fcc8463a)
+
+### Roadmap
+![Generated_Roadmap](https://github.com/user-attachments/assets/ca8c1e6e-6481-4ac0-b06b-bf7de0b00902)
+
+---
+
 ## System Workflow
 
 1. **User specifies learning goals, topics, duration, and daily study time.**
